@@ -7,24 +7,26 @@ import  Sky  from '../models/Sky'
 import Orca from '../models/Orca'
 import Baloon from '../models/Baloon'
 import Bird from '../models/Bird'
+import HomeInfo from '../components/HomeInfo'
 
 const Home = () => {
   const [currentStage, setCurrentStage] = useState(1)
   const [isRotating, setIsRotating] = useState(false)
    const adjustIslandForScreenSize = () => {
     let screenScale = null;
-    let screenPosition = [0, -1, -1];
+    let screenPosition = [0, -1, -1.5];
     let rotation = [0, 0, 0];
 
     if(window.innerWidth < 768) {
-      screenScale = [0.9, 0.9, 0.9];
+      screenScale = [1, 1, 1];
     } else {
       screenScale = [1, 1, 1];
     }
     return [screenScale,screenPosition,rotation];
    }
    const adjustBallonForScreenSize = () => {
-    let screenScale ,screenPosition;
+    let screenScale ;
+    let screenPosition = [0, -20, -1.5];
 
     if(window.innerWidth < 768) {
       screenScale = [1, 1, 1];
@@ -50,9 +52,9 @@ const Home = () => {
 
   return (
     <section className='w-full h-screen relative'>
-      {/* <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
-        POPUP
-      </div> */}
+      <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
+        {currentStage && <HomeInfo currentStage={currentStage}/>}
+      </div>
       <Canvas
        className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
        camera={{near:0.1, far:1000}}
@@ -63,7 +65,7 @@ const Home = () => {
          <pointLight/>
          <spotLight/>
          <hemisphereLight/>
-         <Bird/>
+         <Bird isRotating={isRotating}/>
          <Sky isRotating={isRotating}/>
          <Island
          position={islandPosition}
