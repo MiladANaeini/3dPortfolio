@@ -1,8 +1,13 @@
-import React, { useState,useRef } from 'react';
+import React, { useState,useRef, Suspense } from 'react';
 import emailjs from '@emailjs/browser';
+import { Canvas } from '@react-three/fiber';
+import Toyota from '../models/Toyota'
+import Loader from '../components/Loader'
 const Contact = () => {
   const [form, setForm] = useState({name: '', email: '', message: ''})
   const [isLoading, setIsLoading] = useState(false);
+  const [currentAnimation, setCurrentAnimation] = useState('idle')
+
   const formRef = useRef(null);
   const handleChange = (e) =>{
     setForm({...form , [e.target.name]: e.target.value})
@@ -10,6 +15,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
+    setCurrentAnimation('run')
     
     emailjs.send(
       import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -27,11 +33,12 @@ const Contact = () => {
       setForm({name:'',email:'',message:''});
     }).catch((error)=>{
       setIsLoading(false);
+      setCurrentAnimation('idle')
       console.log(error)
     })
   };
-  const handleFoucs = () => {};
-  const handleBlur = () => {};
+  const handleFoucs = () => setCurrentAnimation('fly');
+  const handleBlur = () => setCurrentAnimation('idle');
   return (
     
     <section className='relative flex lg:flex-row flex-col max-container'>
@@ -95,6 +102,27 @@ const Contact = () => {
            {isLoading ? 'Sending..' : 'Submit Message'}
           </button>
         </form>
+      </div>
+      <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]'>
+       <Canvas
+       camera={{
+        position: [0,0,5],
+        fov:74,
+        near:0.1,
+        far:1000
+       }}
+       >
+        <directionalLight intensity={2.5} position={[0,0,1]}/>
+        <ambientLight intensity={.5}/>
+        <Suspense fallback={<Loader/>}>
+          <Toyota
+          currentAnimation={currentAnimation}
+          position={[0.5,0.1,0]}
+          rotation={[-6,-120,0]}
+          scale={[1.3,1.3,1.3]}
+          />
+        </Suspense>
+       </Canvas>
       </div>
 
     </section>
