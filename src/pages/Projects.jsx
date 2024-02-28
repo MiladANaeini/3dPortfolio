@@ -15,7 +15,14 @@ const Projects = () => {
           <p>
           I have worked on numerous projects throughout the years,
             however, these are the ones I adore the most. Many of them 
-            are accessible through my GitHub page, feel free to explore
+            are accessible through my  
+             <Link 
+                  to={`https://github.com/MiladANaeini`}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className="font-semibold text-blue-600"
+                  >"GitHub"</Link>
+            page, feel free to explore
             them. I want to know your opinion and ideas.
              So do not hesitate to let me know about them!
           </p>
