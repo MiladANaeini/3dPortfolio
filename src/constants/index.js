@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { meta, shopify, starbucks, tesla,logo } from "../assets/images";
 import {
     car,
     contact,
@@ -103,7 +103,7 @@ export const experiences = [
     {
         title: "React.js Developer",
         company_name: "freelancer",
-        icon: starbucks,
+        icon: logo,
         iconBg: "#accbe1",
         date: "May 2020- December 2020",
         points: [
@@ -117,7 +117,7 @@ export const experiences = [
     {
         title: "React Native Developer",
         company_name: "DayaSoft - Nuremberg, Germany",
-        icon: tesla,
+        icon: logo,
         iconBg: "#fbc3bc",
         date: "December 2020- October 2022",
         points: [
@@ -135,7 +135,7 @@ export const experiences = [
     {
         title: "Web Developer",
         company_name: "DevoTeam - Malmö, Sweden",
-        icon: shopify,
+        icon: logo,
         iconBg: "#b7e4c7",
         date: "November 2022- January 202",
         points: [
@@ -157,12 +157,12 @@ export const socialLinks = [
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/MiladANaeini',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://www.linkedin.com/in/milad-a-naeini-ba46611b9/',
     }
 ];
 
@@ -170,43 +170,43 @@ export const projects = [
     {
         iconUrl: pricewise,
         theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
+        name: 'Quiz-Game',
+        description: 'Developed a time based game of questions and answares using JavaScript and React.',
+        link: 'https://miladanaeini.github.io/quiz-game/',
     },
     {
         iconUrl: threads,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
+        name: 'The Words',
+        description: 'Using React,Node.js and (express- Web hosting:) Docker in AWS developed The Words which is an app to search for existing synonyms for words and also gives the user the ability to add new words and synonyms.',
+        link: 'http://ec2-16-170-167-40.eu-north-1.compute.amazonaws.com:3001/',
     },
     {
         iconUrl: car,
         theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        name: 'Media-Tool',
+        description: 'Using TypeScript developed an app which receives an excel file, given in the format of the sample file provided in the task repository and sorts the scores.',
+        link: 'https://github.com/MiladANaeini/Mediatool',
     },
     {
         iconUrl: snapgram,
         theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
+        name: 'The Red Mustang',
+        description: 'Used Unreal Engine 5 to create a short animation with market assets.',
+        link: 'https://drive.google.com/file/d/1W8VO2WNDVpBLfnQ5sX8KZENHbezdnfVT/view',
     },
     {
         iconUrl: estate,
         theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
+        name: 'The Blue Dude',
+        description: 'Used Unreal Engine 5 to develope a platformer game from the ground up with movement mechanics.',
+        link: 'https://drive.google.com/file/d/1Zda9ZX8yy6uV6eEbvs0Rz0x9M1_UF5Ur/view',
     },
     {
         iconUrl: summiz,
         theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+        name: 'The Abandoned Temple',
+        description: 'Used Unreal Engine 5 to develop a first-person puzzle game from the ground up, designed the levels and puzzles.',
+        link: 'https://drive.google.com/file/d/1pWJtjldJnJUT_7s-OLUyZeP4QL8Jlk29/view',
     }
 ];

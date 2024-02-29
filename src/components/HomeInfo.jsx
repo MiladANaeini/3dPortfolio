@@ -13,11 +13,13 @@ const PopUpBox = ({text, link, btnText}) => (
 const renderPopUp = {
     1: (
         <h1 className={`sm:text-xl sm:leading-snug text-center
-         neo-brutalism-blue py-4 px-8 opacity-40 hover:opacity-100 ease-in-out duration-300
+         neo-brutalism-blue py-4 px-8 ease-in-out duration-300
           text-white mx-5`}>Hi I am 
          <span className='font-semibold'> Milad</span> 👋
          <br/>
          I Develop Websites and Games
+         <br/>
+         Use your mouse to navigate
          </h1>
     ),
     2: (
