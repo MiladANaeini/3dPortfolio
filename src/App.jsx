@@ -1,5 +1,4 @@
-import { Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Home, About, Projects, Contact } from "./pages";
 import NavBar from "./components/NavBar";
 
@@ -7,7 +6,7 @@ const App = () => {
   return (
     <div>
       <main className="bg-slate-300/20 h-full">
-        <Suspense>
+        <Router>
           <NavBar />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -15,7 +14,7 @@ const App = () => {
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-        </Suspense>
+        </Router>
       </main>
     </div>
   );
