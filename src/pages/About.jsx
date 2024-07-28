@@ -20,9 +20,8 @@ const About = () => {
       </h1>
       <div className="mt-5 flex flex-col gap-3 text-state-500">
         <p>
-          sssssssssssssssssssssss Software Engineer based in Malmö Sweden,
-          specializing in Web app and game development though hands-on learning
-          and developing aplications
+          Software Engineer based in Malmö Sweden, specializing in Web app and
+          game development though hands-on learning and developing aplications
         </p>
       </div>
       <div className="py-10 flex flex-col">
