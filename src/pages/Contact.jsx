@@ -106,7 +106,7 @@ const Contact = () => {
       <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]'>
        <Canvas
        camera={{
-        position: [0,0,5],
+        position: [0,0,10],
         fov:74,
         near:0.1,
         far:1000
@@ -117,9 +117,9 @@ const Contact = () => {
         <Suspense fallback={<Loader/>}>
           <Toyota
           currentAnimation={currentAnimation}
-          position={[0.8,-1,0]}
+          position={[0.8,1,0]}
           rotation={[0.3,-120,0]}
-          scale={[1.3,1.3,1.3]}
+          scale={[1.5,1.5,1.5]}
           />
         </Suspense>
        </Canvas>
